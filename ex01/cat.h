@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_head.h                                          :+:      :+:    :+:   */
+/*   cat.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fadelia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 18:41:35 by fadelia           #+#    #+#             */
-/*   Updated: 2021/02/02 13:51:24 by fadelia          ###   ########.fr       */
+/*   Created: 2021/02/02 17:23:51 by fadelia           #+#    #+#             */
+/*   Updated: 2021/02/02 18:09:11 by fadelia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_HEAD_H
-# define FT_HEAD_H
-# define MSG1 "Too many arguments.\n"
-# define MSG2 "File name missing.\n"
-# define MSG3 "Cannot read file.\n"
+#ifndef CAT_H
+# define CAT_H
+# define CAT "cat: "
+
 # include <unistd.h>
+# include <fcntl.h>
 # include <sys/types.h>
 # include <sys/stat.h>
-# include <fcntl.h>
+# include <errno.h>
+# include <libgen.h>
+# include <string.h>
 
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
 #endif

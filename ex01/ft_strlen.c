@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_head.h                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fadelia <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 18:41:35 by fadelia           #+#    #+#             */
-/*   Updated: 2021/02/02 13:51:24 by fadelia          ###   ########.fr       */
+/*   Created: 2021/01/25 14:51:43 by fadelia           #+#    #+#             */
+/*   Updated: 2021/01/26 17:29:20 by fadelia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_HEAD_H
-# define FT_HEAD_H
-# define MSG1 "Too many arguments.\n"
-# define MSG2 "File name missing.\n"
-# define MSG3 "Cannot read file.\n"
-# include <unistd.h>
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h>
+int	ft_strlen(char *str)
+{
+	int i;
 
-#endif
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
